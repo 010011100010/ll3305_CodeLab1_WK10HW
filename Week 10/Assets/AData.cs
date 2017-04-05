@@ -31,7 +31,7 @@ public class AData {
 		return json;
 	}
 
-	public void Save() {
+	public void Save(string fileName) {
 	
 		JSONClass json = toJSON ();
 		UtilScript.WriteJSONtoFile (Application.dataPath, fileName, json);
