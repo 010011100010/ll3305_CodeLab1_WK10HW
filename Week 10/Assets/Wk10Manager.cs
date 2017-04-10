@@ -7,6 +7,8 @@ public class Wk10Manager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		myLoader = new Loader (0.123f, "Hey");//initialize "myLoader" as a new object of class Loader
+		//Constructors should only be used when it is not extending from MonoBehaviour
+
 		//myLoader.temp = 0.123F;
 		myLoader.Manager = this;
 		print(myLoader.name);

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using SimpleJSON;
@@ -13,7 +13,7 @@ public class Saver : MonoBehaviour {
 
 		/*JSONClass json = new JSONClass ();
 		json ["xPos"].AsFloat = pos.x;
-		json ["yPos"].AsFloat = pos.y;*/
+		json ["yPos"].AsFloat = pos.y;
 
 		AData ad = new AData (pos, scale);
 		ad.Save ("a.txt");
@@ -26,4 +26,4 @@ public class Saver : MonoBehaviour {
 	void Update () {
 		
 	}
-}
+}*/
