@@ -4,14 +4,18 @@ using UnityEngine;
 using SimpleJSON;
 
 public class FourBallLoader : MonoBehaviour {
-
+	public Vector3 ball;
 	// Use this for initialization
 	void Start () {
-		JSONArray position = JSON.Parse (UtilScript.ReadStringFromFile (Application.dataPath, "c.txt"));
-		print (position);
+		JSONArray ballPositions = UtilScript.ReadJSONFromFile (Application.dataPath, "c.txt") as JSONArray;
+		print (ballPositions);
 
 		//GameObject ball1 = GameObject.CreatePrimitive (PrimitiveType.Sphere);
-
+		for (int i = 0; i<ballPositions.Count; i++){
+			ball = new Vector3 (ballPositions [i] ["xpos"].AsFloat, ballPositions [i] ["ypos"].AsFloat, ballPositions [i] ["zpos"].AsFloat);
+			GameObject sphere = GameObject.CreatePrimitive (PrimitiveType.Sphere);
+			sphere.transform.position = ball;
+		}
 		
 	}
 	

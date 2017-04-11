@@ -18,7 +18,7 @@ public class AData {
 
 	}
 		
-	public AData(Vector3 position, Vector3 scale){
+	public AData(Vector3 position, Vector3 scale){	1
 		this.position = position;
 		this.scale = scale;
 	}
